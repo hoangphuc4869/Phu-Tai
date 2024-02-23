@@ -63,6 +63,7 @@ let getSlide = boxItem.length - 1;
 let slideCalc = 30 / getSlide + "%";
 
 if (box) {
+  box[0].classList.add("active");
   box.forEach((e) => {
     e.addEventListener("click", () => {
       box.forEach((box) => {
@@ -73,6 +74,36 @@ if (box) {
     });
   });
 }
+
+// const mb = document.querySelectorAll(".box-content-mobile");
+// const mbTitle = document.querySelectorAll(".box-title-mobile");
+
+// if (mbTitle) {
+//   mbTitle.forEach((item, index) => {
+//     item.addEventListener("click", () => {
+//       mb.forEach((e) => {
+//         e.classList.remove("active");
+//       });
+//       mb[index].classList.add("active");
+//     });
+//   });
+// }
+
+$(document).ready(function () {
+  $(".box-title-mobile").on("click", function (e) {
+    e.preventDefault();
+    var $this = $(this);
+    var $content = $this.next(".box-content-mobile");
+
+    if (!$this.hasClass("active")) {
+      $(".box-content-mobile").slideUp(400);
+      $(".box-title-mobile").removeClass("active");
+    }
+
+    $this.toggleClass("active");
+    $content.slideToggle();
+  });
+});
 
 // function is70Percent(n) {
 //   return n % 4 === 1 || n % 4 === 4;

@@ -38,122 +38,62 @@
             </div>
         </div>
         <ul class="box-wrap">
-            <li class="box active">
-                <div class="box-title">
-                    01 NGÀNH ĐÁ
-                </div>
-                <div class="box-content">
-                    <img src="https://s3-alpha-sig.figma.com/img/f40c/8996/d5005b41cb7c9830a7bbf919fd328980?Expires=1709510400&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=nsjluhIGumnGbNxrzw739e~FgSfdCBRK7ZiWvpkwNS4P2sHjylZPfZZYmLlMPYHrL1oInEbYY5CYitUlypQvh02eX8kVjfZ7PvWXFQIzaCwmpleR276f3KERE8viVbpZKa5j3wMaT05OWIAz7AQK85IqFzvB5IQiyXLZg190sp1lSk7hylM7Dd~OKj6j6uu8OmhKVUrHdQogG6l0LcGJMe5ifDeuiybq16UOutNHkUAyt3TZZaEjTk5qQp3oYGW9ffS4ixyOedhlEbRauUdOZk9XZI19szzl~WcGdslq2MDxnqm4~vRbtvKTfOwaRnbqJ-7FILo6FlzdlK9gE6XwEQ__"
-                        alt="" class="w-100">
-                    <div class="box-text-wrap">
-                        <div class="box-title2">01 <br> NGÀNH ĐÁ</div>
-                        <div class="box-text">
-                            <p>
-                                Với mong muốn đem đến cho thị trường những sản phẩm theo tiêu chuẩn quốc tế với tính
-                                thẩm mỹ
-                                cao và độ bền cùng thời gian, Công ty Cổ phần Phú Tài (Phú Tài JSC) luôn dẫn đầu và tiên
-                                phong trong việc đưa ra các sản phấm làm bằng đá tự nhiên cao cấp, không chỉ mang lại sự
-                                sang trọng hoàn hảo cho bất kỳ không gian nào mà còn đứng vững trước thử thách của thời
-                                gian. Nâng tầm không gian của bạn bằng sản phẩm đá của chúng tôi - sự pha trộn hoàn hảo
-                                giữa
-                                vẻ đẹp và độ bền vượt thời gian.
-                            </p>
-                            <div class="more">
-                                <a href="<?php echo get_sub_field("img") ?>">Xem thêm </a>
-                            </div>
-
-
-                        </div>
-                    </div>
-                </div>
-            </li>
+            <?php if(have_rows("fields")): while(have_rows("fields")): the_row(); ?>
             <li class="box">
                 <div class="box-title">
-                    02 NGÀNH GỖ
+                    <span><?php echo get_sub_field("stt") ?></span>
+                    <span><?php echo get_sub_field("name") ?></span>
                 </div>
                 <div class="box-content">
-                    <img src="https://s3-alpha-sig.figma.com/img/f40c/8996/d5005b41cb7c9830a7bbf919fd328980?Expires=1709510400&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=nsjluhIGumnGbNxrzw739e~FgSfdCBRK7ZiWvpkwNS4P2sHjylZPfZZYmLlMPYHrL1oInEbYY5CYitUlypQvh02eX8kVjfZ7PvWXFQIzaCwmpleR276f3KERE8viVbpZKa5j3wMaT05OWIAz7AQK85IqFzvB5IQiyXLZg190sp1lSk7hylM7Dd~OKj6j6uu8OmhKVUrHdQogG6l0LcGJMe5ifDeuiybq16UOutNHkUAyt3TZZaEjTk5qQp3oYGW9ffS4ixyOedhlEbRauUdOZk9XZI19szzl~WcGdslq2MDxnqm4~vRbtvKTfOwaRnbqJ-7FILo6FlzdlK9gE6XwEQ__"
-                        alt="" class="w-100">
+                    <img src="<?php echo get_sub_field("img") ?>" alt="" class="w-100">
                     <div class="box-text-wrap">
-                        <div class="box-title2">01 <br> NGÀNH ĐÁ</div>
+                        <div class="box-title2">
+                            <span> <?php echo get_sub_field("stt") ?></span> <br>
+                            <span><?php echo get_sub_field("name") ?></span>
+                        </div>
                         <div class="box-text">
                             <p>
-                                Với mong muốn đem đến cho thị trường những sản phẩm theo tiêu chuẩn quốc tế với tính
-                                thẩm mỹ
-                                cao và độ bền cùng thời gian, Công ty Cổ phần Phú Tài (Phú Tài JSC) luôn dẫn đầu và tiên
-                                phong trong việc đưa ra các sản phấm làm bằng đá tự nhiên cao cấp, không chỉ mang lại sự
-                                sang trọng hoàn hảo cho bất kỳ không gian nào mà còn đứng vững trước thử thách của thời
-                                gian. Nâng tầm không gian của bạn bằng sản phẩm đá của chúng tôi - sự pha trộn hoàn hảo
-                                giữa
-                                vẻ đẹp và độ bền vượt thời gian.
+                                <?php echo get_sub_field("desc") ?>
                             </p>
                             <div class="more">
-                                <a href="<?php echo get_sub_field("img") ?>">Xem thêm </a>
+                                <a href="<?php echo get_sub_field("link") ?>">Xem thêm </a>
                             </div>
-
-
                         </div>
                     </div>
                 </div>
             </li>
-            <li class="box">
-                <div class="box-title">
-                    02 NGÀNH GỖ
+            <?php endwhile;endif ?>
+
+
+        </ul>
+        <ul class="box-wrap-mobile">
+            <?php if(have_rows("fields")): while(have_rows("fields")): the_row(); ?>
+            <li class="box-mobile">
+                <div class="box-title-mobile">
+                    <span><?php echo get_sub_field("stt") ?></span>
+                    <span><?php echo get_sub_field("name") ?></span>
                 </div>
-                <div class="box-content">
-                    <img src="https://s3-alpha-sig.figma.com/img/f40c/8996/d5005b41cb7c9830a7bbf919fd328980?Expires=1709510400&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=nsjluhIGumnGbNxrzw739e~FgSfdCBRK7ZiWvpkwNS4P2sHjylZPfZZYmLlMPYHrL1oInEbYY5CYitUlypQvh02eX8kVjfZ7PvWXFQIzaCwmpleR276f3KERE8viVbpZKa5j3wMaT05OWIAz7AQK85IqFzvB5IQiyXLZg190sp1lSk7hylM7Dd~OKj6j6uu8OmhKVUrHdQogG6l0LcGJMe5ifDeuiybq16UOutNHkUAyt3TZZaEjTk5qQp3oYGW9ffS4ixyOedhlEbRauUdOZk9XZI19szzl~WcGdslq2MDxnqm4~vRbtvKTfOwaRnbqJ-7FILo6FlzdlK9gE6XwEQ__"
-                        alt="" class="w-100">
-                    <div class="box-text-wrap">
-                        <div class="box-title2">01 <br> NGÀNH ĐÁ</div>
-                        <div class="box-text">
+                <div class="box-content-mobile">
+                    <img src="<?php echo get_sub_field("img") ?>" alt="" class="w-100">
+                    <div class="box-text-wrap-mobile">
+                        <div class="box-title2-mobile">
+                            <span> <?php echo get_sub_field("stt") ?></span> <br>
+                            <span><?php echo get_sub_field("name") ?></span>
+                        </div>
+                        <div class="box-text-mobile">
                             <p>
-                                Với mong muốn đem đến cho thị trường những sản phẩm theo tiêu chuẩn quốc tế với tính
-                                thẩm mỹ
-                                cao và độ bền cùng thời gian, Công ty Cổ phần Phú Tài (Phú Tài JSC) luôn dẫn đầu và tiên
-                                phong trong việc đưa ra các sản phấm làm bằng đá tự nhiên cao cấp, không chỉ mang lại sự
-                                sang trọng hoàn hảo cho bất kỳ không gian nào mà còn đứng vững trước thử thách của thời
-                                gian. Nâng tầm không gian của bạn bằng sản phẩm đá của chúng tôi - sự pha trộn hoàn hảo
-                                giữa
-                                vẻ đẹp và độ bền vượt thời gian.
+                                <?php echo get_sub_field("desc") ?>
                             </p>
-                            <div class="more">
-                                <a href="<?php echo get_sub_field("img") ?>">Xem thêm </a>
+                            <div class="more more-mobile">
+                                <a href="<?php echo get_sub_field("link") ?>">Xem thêm </a>
                             </div>
-
-
                         </div>
                     </div>
                 </div>
             </li>
-            <li class="box">
-                <div class="box-title">
-                    02 NGÀNH GỖ
-                </div>
-                <div class="box-content">
-                    <img src="https://s3-alpha-sig.figma.com/img/f40c/8996/d5005b41cb7c9830a7bbf919fd328980?Expires=1709510400&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=nsjluhIGumnGbNxrzw739e~FgSfdCBRK7ZiWvpkwNS4P2sHjylZPfZZYmLlMPYHrL1oInEbYY5CYitUlypQvh02eX8kVjfZ7PvWXFQIzaCwmpleR276f3KERE8viVbpZKa5j3wMaT05OWIAz7AQK85IqFzvB5IQiyXLZg190sp1lSk7hylM7Dd~OKj6j6uu8OmhKVUrHdQogG6l0LcGJMe5ifDeuiybq16UOutNHkUAyt3TZZaEjTk5qQp3oYGW9ffS4ixyOedhlEbRauUdOZk9XZI19szzl~WcGdslq2MDxnqm4~vRbtvKTfOwaRnbqJ-7FILo6FlzdlK9gE6XwEQ__"
-                        alt="" class="w-100">
-                    <div class="box-text-wrap">
-                        <div class="box-title2">01 <br> NGÀNH ĐÁ</div>
-                        <div class="box-text">
-                            <p>
-                                Với mong muốn đem đến cho thị trường những sản phẩm theo tiêu chuẩn quốc tế với tính
-                                thẩm mỹ
-                                cao và độ bền cùng thời gian, Công ty Cổ phần Phú Tài (Phú Tài JSC) luôn dẫn đầu và tiên
-                                phong trong việc đưa ra các sản phấm làm bằng đá tự nhiên cao cấp, không chỉ mang lại sự
-                                sang trọng hoàn hảo cho bất kỳ không gian nào mà còn đứng vững trước thử thách của thời
-                                gian. Nâng tầm không gian của bạn bằng sản phẩm đá của chúng tôi - sự pha trộn hoàn hảo
-                                giữa
-                                vẻ đẹp và độ bền vượt thời gian.
-                            </p>
-                            <div class="more">
-                                <a href="<?php echo get_sub_field("img") ?>">Xem thêm </a>
-                            </div>
+            <?php endwhile;endif ?>
 
 
-                        </div>
-                    </div>
-                </div>
-            </li>
         </ul>
     </div>
 </div>
