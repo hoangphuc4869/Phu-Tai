@@ -113,6 +113,145 @@ if (provincesName) {
   });
 }
 
+// const chart1 = document.querySelector(".chart1");
+// const chartData = {
+//   labels: ["Python", "Java", "JavaScript", "C#", "Others"],
+//   data: [30, 17, 10, 7, 36],
+// };
+
+// new Chart(chart1, {
+//   type: "doughnut",
+//   data: {
+//     labels: chartData.labels,
+//     datasets: [
+//       {
+//         label: "Language Popularity",
+//         data: chartData.data,
+//       },
+//     ],
+//   },
+//   options: {
+//     borderWidth: 10,
+//     borderRadius: 2,
+//     hoverBorderWidth: 0,
+//     plugins: {
+//       legend: {
+//         display: false,
+//       },
+//     },
+//   },
+// });
+
+const chart1 = document.querySelector(".chart1");
+const chart2 = document.querySelector(".chart2");
+const dataChart1 = {
+  labels: [
+    "Điện thoại và các loại linh kiện",
+    "Hàng dệt, may",
+    "Điện tử, máy tính và linh kiện",
+    "Giày dép",
+    "Máy móc, thiết bị, dụng cụ và phụ tùng khác",
+    "Hàng hải sản",
+    "Gỗ và sản phẩm gỗ",
+    "Dầu thô",
+  ],
+  datasets: [
+    {
+      label: "Chiếm",
+      data: [20, 15, 13, 12, 10, 8, 5, 30],
+      backgroundColor: [
+        "#67C587",
+        "#E5F1E8",
+        "#C9EAD4",
+        "#A9DEBA",
+        "#88D1A1",
+        "#59AA76",
+        "#003366",
+        "#3E7553",
+      ],
+      hoverOffset: 4,
+    },
+  ],
+};
+const dataChart2 = {
+  labels: [
+    "Mỹ",
+    "Trung Quốc",
+    "Nhật Bản",
+    "Hàn Quốc",
+    "Anh",
+    "Úc",
+    "Canada",
+    "Đức",
+    "Pháp",
+    "Hà Lan",
+    "Đài Loan",
+    "Án Độ",
+    "Khác",
+  ],
+  datasets: [
+    {
+      label: "Chiếm",
+      backgroundColor: [
+        "#5E3FBE",
+        "#F4F0FD",
+        "#E5DAFB",
+        "#CBB6F8",
+        "#A88DEB",
+        "#886BD8",
+        "#472EA3",
+        "#341F88",
+        "#23146E",
+        "#28169A",
+        "#5E3FBE",
+        "#E5DAFB",
+      ],
+      data: ["40", "15", "15", "13", "8", "3", "3", "3", "3", "2", "2", "8"],
+      hoverOffset: 4,
+    },
+  ],
+};
+const configchart1 = {
+  type: "doughnut",
+  data: dataChart1,
+  options: {
+    plugins: {
+      tooltip: {
+        callbacks: {
+          label: function (context) {
+            return context.dataset.label + ": " + context.formattedValue + "%";
+          },
+        },
+      },
+      legend: {
+        boxWidth: 10,
+        usePointStyle: true,
+        pointStyle: "circle",
+      },
+    },
+  },
+};
+const configchart2 = {
+  type: "doughnut",
+  data: dataChart2,
+  options: {
+    plugins: {
+      tooltip: {
+        callbacks: {
+          label: function (context) {
+            return context.dataset.label + ": " + context.formattedValue + "%";
+          },
+        },
+      },
+    },
+  },
+};
+
+if (chart1) {
+  new Chart(chart1, configchart1);
+  new Chart(chart2, configchart2);
+}
+
 // $(document).ready(function () {
 //   $(".box-title-mobile").on("click", function (e) {
 //     e.preventDefault();

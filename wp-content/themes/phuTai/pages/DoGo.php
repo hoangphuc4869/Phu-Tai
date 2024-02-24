@@ -35,6 +35,14 @@
             <?php endwhile;endif ?>
 
         </div>
+        <div class="row chart">
+            <div class="col-lg-6">
+                <canvas class="chart1"></canvas>
+            </div>
+            <div class="col-lg-6">
+                <canvas class="chart2"></canvas>
+            </div>
+        </div>
     </div>
 </div>
 
@@ -85,6 +93,7 @@
         </div>
     </div>
 </div>
+
 
 
 <?php get_footer()?>
