@@ -16,6 +16,7 @@ function m_register_menu()
 			'menu-3' => __('Menu Footer1'),
 			'menu-4' => __('Menu Footer2'),
 			'menu-5' => __('Menu Footer5'),
+			'menu-6' => __('Menu da op'),
 		)
 	);
 }

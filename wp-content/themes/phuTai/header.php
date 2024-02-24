@@ -52,11 +52,12 @@
             <div class="container heading">
                 <div class="left-heading d-flex align-items-center">
                     <div class="logo">
-                        <a href="<?php home_url() ?>"><img src="<?php echo get_field("logo",'option') ?>" alt=""
-                                class="img-fluid"></a>
+                        <a href="<?php echo get_bloginfo('url'); ?>"><img src="<?php echo get_field("logo",'option') ?>"
+                                alt="" class="img-fluid"></a>
                     </div>
                     <div class="company-name"><a
-                            href="<?php home_url() ?>"><?php echo get_field("company-name",'option') ?></a></div>
+                            href="<?php echo get_bloginfo('url'); ?>"><?php echo get_field("company-name",'option') ?></a>
+                    </div>
                 </div>
                 <div class="right-heading">
                     <div class="language">
