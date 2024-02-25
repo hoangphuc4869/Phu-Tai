@@ -208,6 +208,7 @@ const dataChart2 = {
       ],
       data: ["40", "15", "15", "13", "8", "3", "3", "3", "3", "2", "2", "8"],
       hoverOffset: 4,
+      pointStyle: "circle",
     },
   ],
 };
@@ -215,7 +216,20 @@ const configchart1 = {
   type: "doughnut",
   data: dataChart1,
   options: {
+    animation: false,
     plugins: {
+      title: {
+        display: true,
+        text: "Giá trị xuất khẩu 1 số mặt hàng chủ lực",
+        font: {
+          size: 18,
+          family: "Roboto",
+          weight: "bold",
+        },
+        padding: {
+          bottom: 50,
+        },
+      },
       tooltip: {
         callbacks: {
           label: function (context) {
@@ -224,9 +238,12 @@ const configchart1 = {
         },
       },
       legend: {
-        boxWidth: 10,
-        usePointStyle: true,
-        pointStyle: "circle",
+        display: false,
+        labels: {
+          usePointStyle: true,
+        },
+        align: "start",
+        padding: 10,
       },
     },
   },
@@ -235,7 +252,23 @@ const configchart2 = {
   type: "doughnut",
   data: dataChart2,
   options: {
+    animation: false,
     plugins: {
+      legend: {
+        display: false,
+      },
+      title: {
+        display: true,
+        text: "Giá trị xuất khẩu 1 số mặt hàng chủ lực",
+        font: {
+          size: 18,
+          family: "Roboto",
+          weight: "bold",
+        },
+        padding: {
+          bottom: 50,
+        },
+      },
       tooltip: {
         callbacks: {
           label: function (context) {
@@ -251,6 +284,92 @@ if (chart1) {
   new Chart(chart1, configchart1);
   new Chart(chart2, configchart2);
 }
+
+const statCountry = [
+  { circle: "#5E3FBE", desc: "Mỹ" },
+  { circle: "#F4F0FD", desc: "Trung Quốc" },
+  { circle: "#E5DAFB", desc: "Nhật Bản" },
+  { circle: "#CBB6F8", desc: "Hàn Quốc" },
+  { circle: "#A88DEB", desc: "Anh" },
+  { circle: "#886BD8", desc: "Úc" },
+  { circle: "#472EA3", desc: "Canada" },
+  { circle: "#341F88", desc: "Đức" },
+  { circle: "#23146E", desc: "Pháp" },
+  { circle: "#28169A", desc: "Hà Lan" },
+  { circle: "#5E3FBE", desc: "Đài Loan" },
+  { circle: "#E5DAFB", desc: "Án Độ" },
+  { circle: "#DBDBDB", desc: "Khác" },
+];
+
+const statProduct = [
+  { circle: "#67C587", desc: "Điện thoại và các loại linh kiện" },
+  { circle: "#E5F1E8", desc: "Hàng dệt, may" },
+  { circle: "#C9EAD4", desc: "Điện tử, máy tính và linh kiện" },
+  { circle: "#A9DEBA", desc: "Giày dép" },
+  {
+    circle: "#88D1A1",
+    desc: "Máy móc, thiết bị, dụng cụ và phụ tùng khác",
+  },
+  { circle: "#59AA76", desc: "Hàng hải sản" },
+  { circle: "#003366", desc: "Gỗ và sản phẩm gỗ" },
+  { circle: "#3E7553", desc: "Dầu thô" },
+  { circle: "#DBDBDB", desc: "Khác" },
+];
+
+const chart1Legend = document.querySelector(".legend1");
+if (chart1Legend) {
+  statProduct.forEach((stat) => {
+    const html = /*html */ `
+  <div class="col-6">
+    <div class="legend-item d-flex align-items-center gap-3 ">
+        <div class="circle" style="background-color: ${stat.circle} "></div>
+        <div class="legend-desc">${stat.desc}</div>
+    </div>
+  </div>
+  `;
+    chart1Legend.innerHTML += html;
+  });
+}
+
+const chart2Legend = document.querySelector(".legend2");
+if (chart2Legend) {
+  statCountry.forEach((stat) => {
+    const html = /*html */ `
+  <div class="col-4">
+    <div class="legend-item d-flex align-items-center gap-3 ">
+        <div class="circle" style="background-color: ${stat.circle} "></div>
+        <div class="legend-desc">${stat.desc}</div>
+    </div>
+  </div>
+  `;
+    chart2Legend.innerHTML += html;
+  });
+}
+
+// const observer = new IntersectionObserver((entries) => {
+//   entries.forEach((entry) => {
+//     if (entry.isIntersecting) {
+//       configchart1.options.animation = true;
+//     } else {
+//       configchart1.options.animation = false;
+//     }
+
+//     // Cập nhật lại biểu đồ sau khi thay đổi tùy chọn
+//     console.log(configchart1);
+//     updateChart();
+//   });
+// });
+
+// // Theo dõi phần tử biểu đồ
+// observer.observe(document.querySelector(".chart1"));
+
+// function updateChart() {
+//   const chart = Chart.getChart("myChart");
+
+//   if (chart) {
+//     chart.update();
+//   }
+// }
 
 // $(document).ready(function () {
 //   $(".box-title-mobile").on("click", function (e) {

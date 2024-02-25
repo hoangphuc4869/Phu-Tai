@@ -37,10 +37,21 @@
         </div>
         <div class="row chart">
             <div class="col-lg-6">
-                <canvas class="chart1"></canvas>
+                <div class="chart-wrap">
+                    <canvas class="chart1"></canvas>
+                    <div class="row legend1">
+
+
+                    </div>
+                </div>
             </div>
             <div class="col-lg-6">
-                <canvas class="chart2"></canvas>
+                <div class="chart-wrap">
+                    <canvas class="chart2">
+
+                    </canvas>
+                    <div class="row legend2"></div>
+                </div>
             </div>
         </div>
     </div>

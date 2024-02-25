@@ -783,6 +783,27 @@ div#khanhhoa {
   object-fit: cover;
 }
 
+.circle {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  border-radius: 50px;
+  top: 3px;
+}
+
+.legend1,
+.legend2 {
+  margin-top: 50px;
+}
+.legend-desc {
+  padding-left: 40px;
+}
+
+.legend-item {
+  position: relative;
+  margin-bottom: 10px;
+}
+
 @media (max-width: 1140px) {
 }
 @media (max-width: 960px) {
