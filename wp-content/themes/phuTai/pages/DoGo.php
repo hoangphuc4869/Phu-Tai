@@ -36,7 +36,7 @@
 
         </div>
         <div class="row chart">
-            <div class="col-lg-6">
+            <div class="col-lg-6 col-md-6">
                 <div class="chart-wrap">
                     <canvas class="chart1"></canvas>
                     <div class="row legend1">
@@ -45,7 +45,7 @@
                     </div>
                 </div>
             </div>
-            <div class="col-lg-6">
+            <div class="col-lg-6 col-md-6">
                 <div class="chart-wrap">
                     <canvas class="chart2">
 
@@ -53,6 +53,62 @@
                     <div class="row legend2"></div>
                 </div>
             </div>
+        </div>
+    </div>
+</div>
+
+<div class="sp-go-wrap">
+    <div class="container">
+        <div class="nha-may-title"><?php echo get_field("san-pham-go-title") ?></div>
+    </div>
+    <div class="container sp-go">
+
+        <?php if(have_rows("san-pham-go")): while(have_rows("san-pham-go")): the_row(); ?>
+        <div class="row item-go">
+            <div class="col-lg-6 col-md-6">
+                <div class="left-sp">
+                    <?php if(have_rows("spimg")): while(have_rows("spimg")): the_row(); ?>
+                    <img src="<?php echo get_sub_field("img") ?>" alt="" class="sp-img w-100">
+                    <?php endwhile;endif ?>
+                </div>
+            </div>
+            <div class="col-lg-6 col-md-6">
+                <div class="right-sp">
+                    <div class="sp-title"><?php echo get_sub_field("name")?></div>
+                    <div class="sp-desc"><?php echo get_sub_field("desc")?></div>
+                </div>
+            </div>
+        </div>
+        <?php endwhile;endif ?>
+    </div>
+</div>
+
+<div class="cong-suat-wrap">
+    <div class="container">
+        <div class="nha-may-title"><?php echo get_field("nha-may-title") ?></div>
+        <div class="nha-may-bg">
+            <img src="<?php echo get_field("nha-may-bg") ?>" alt="" class="w-100">
+            <div class="row nha-may-wrap">
+                <?php if(have_rows("nha-mays")): while(have_rows("nha-mays")): the_row(); ?>
+                <div class="col-lg-4 col-md-6">
+                    <div class="nha-may">
+                        <div class="nha-may-name"><?php echo get_sub_field("name") ?></div>
+                        <div class="nha-may-desc">
+                            <?php if(have_rows("desc")): while(have_rows("desc")): the_row(); ?>
+                            <p>
+                                <img src="<?php echo get_sub_field("icon") ?>" alt="">
+                                <span><?php echo get_sub_field("text") ?></span>
+                            </p>
+                            <?php endwhile;endif ?>
+
+                        </div>
+                    </div>
+
+                </div>
+                <?php endwhile;endif ?>
+
+            </div>
+
         </div>
     </div>
 </div>

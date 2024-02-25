@@ -528,7 +528,8 @@ ul#menu-menu-da-op li.current_page_item a {
 .da-op .title,
 .mo-da-title,
 .cty-da-title,
-.dogo-heading-title {
+.dogo-heading-title,
+.nha-may-title {
   font-family: "Big Shoulders Display", sans-serif;
   font-size: 40px;
   font-weight: 700;
@@ -536,6 +537,10 @@ ul#menu-menu-da-op li.current_page_item a {
   color: #003366;
   text-transform: uppercase;
   /* margin-bottom: 30px; */
+}
+
+.nha-may-title {
+  margin-bottom: 30px;
 }
 
 .dogo-heading-wrap {
@@ -639,8 +644,6 @@ ul#menu-menu-da-op li.current_page_item a {
 .binh-dinh.active::before,
 .khanh-hoa.active::before {
   animation: pulse 1s ease-in-out infinite;
-  box-shadow: 0 0 5px #f16336, 0 0 10px #f16336, 0 0 15px #f16336,
-    0 0 20px #f16336, 0 0 25px #f16336, 0 0 30px #f16336;
 }
 
 .yen-bai::after,
@@ -666,14 +669,14 @@ ul#menu-menu-da-op li.current_page_item a {
 .khanh-hoa.active::after,
 .dak-nong.active::after {
   animation: pulse 1s 0.8s ease-in-out infinite;
-  box-shadow: 0 0 5px #f16336, 0 0 15px #f16336, 0 0 20px #f16336,
-    0 0 30px #f16336, 0 0 45px #f16336, 0 0 50px #f16336;
 }
 
 @keyframes pulse {
   100% {
     transform: scale(4.5);
     opacity: 0;
+    box-shadow: 0 0 5px #f16336, 0 0 15px #f16336, 0 0 20px #f16336,
+      0 0 30px #f16336, 0 0 45px #f16336, 0 0 50px #f16336;
   }
 }
 
@@ -804,6 +807,116 @@ div#khanhhoa {
   margin-bottom: 10px;
 }
 
+.left-sp {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  gap: 15px;
+}
+
+.left-sp .sp-img:first-child {
+  grid-column: 1/2;
+  grid-row: 1/2;
+}
+.left-sp .sp-img:nth-child(2) {
+  grid-column: 2/3;
+  grid-row: 1/2;
+}
+
+.left-sp .sp-img:nth-child(3) {
+  grid-column: 1/3;
+  grid-row: 2/3;
+}
+
+.item-go {
+  margin-bottom: 70px;
+}
+
+.sp-go .item-go:nth-child(odd) .col-lg-6:last-child {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+.sp-go .item-go:nth-child(even) .col-lg-6:last-child {
+  display: flex;
+  align-items: center;
+}
+.left-sp .sp-img {
+  border-radius: 10px;
+}
+
+.legend-desc {
+  font-family: "Roboto", sans-serif;
+}
+
+.sp-title {
+  font-family: "Roboto";
+  font-size: 30px;
+  font-weight: 500;
+  margin-bottom: 20px;
+  color: #001933;
+  text-transform: uppercase;
+}
+
+.sp-desc {
+  color: #526d88;
+}
+
+.sp-go .item-go:nth-child(even) .col-lg-6:first-child {
+  order: 2;
+}
+
+.right-sp {
+  width: 85%;
+}
+
+.nha-may-bg {
+  position: relative;
+}
+
+.nha-may-wrap {
+  position: absolute;
+  top: 0;
+  left: 12px;
+  width: 100%;
+  height: 100%;
+  color: #fff;
+  padding: 40px 0;
+}
+
+.nha-may {
+  padding-left: 40px;
+}
+
+.nha-may-desc p {
+  margin-bottom: 12px;
+  display: flex;
+  align-items: center;
+  column-gap: 10px;
+}
+
+.nha-may-bg > img {
+  border-radius: 20px;
+}
+
+.cong-suat-wrap {
+  padding-bottom: 50px;
+}
+
+.nha-may-wrap .col-lg-4:nth-child(2) {
+  margin-top: 10%;
+}
+
+.nha-may-wrap .col-lg-4:nth-child(3) {
+  margin-top: 20%;
+}
+
+.nha-may-name {
+  font-size: 22px;
+  text-transform: capitalize;
+  margin-bottom: 10px;
+}
+
 @media (max-width: 1140px) {
 }
 @media (max-width: 960px) {
@@ -813,8 +926,65 @@ div#khanhhoa {
   .box-text {
     width: 90%;
   }
+  .cty-name a {
+    height: auto;
+    max-height: 48px;
+  }
+  .legend-desc {
+    font-size: 12px;
+  }
+  .sp-title {
+    font-size: 26px;
+    margin-bottom: 5px;
+  }
+  .sp-desc {
+    font-size: 13px;
+  }
+  .nha-may-wrap .col-lg-4:nth-child(2) {
+    margin-top: unset;
+  }
+  .nha-may-wrap .col-lg-4:nth-child(3) {
+    margin-top: unset;
+  }
+  .nha-may-bg > img {
+    border-radius: 20px;
+    height: 550px;
+    object-fit: cover;
+  }
+  .nha-may-wrap {
+    background: #00000094;
+    border-radius: 20px;
+  }
 }
 @media (max-width: 720px) {
+  canvas.chart2 {
+    margin-top: 40px;
+  }
+  canvas.chart1 {
+    margin-top: 40px;
+  }
+
+  .nha-may-bg > img {
+    border-radius: 20px;
+    height: 750px;
+    object-fit: cover;
+  }
+  .sp-go .item-go:nth-child(even) .col-lg-6:first-child {
+    order: unset;
+  }
+  .item-go {
+    margin-bottom: 30px;
+  }
+
+  .left-sp {
+    margin-bottom: 20px;
+  }
+  .sp-go .item-go:nth-child(odd) .col-lg-6:last-child {
+    display: unset;
+  }
+  .right-sp {
+    width: 100%;
+  }
   .cty-img img {
     height: 150px;
   }
