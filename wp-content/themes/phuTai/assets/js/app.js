@@ -153,6 +153,7 @@ if (provincesName) {
 
 const chart1 = document.querySelector(".chart1");
 const chart2 = document.querySelector(".chart2");
+const chart3 = document.querySelector(".chart3");
 const dataChart1 = {
   labels: [
     "Điện thoại và các loại linh kiện",
@@ -221,11 +222,31 @@ const dataChart2 = {
     },
   ],
 };
+const dataChart3 = {
+  labels: ["", "", "", "", "", "", "", "", ""],
+  datasets: [
+    {
+      barThickness: 50,
+      backgroundColor: [
+        "#0263FF",
+        "#FF7723",
+        "#8E30FF",
+        "#126492",
+        "#B45B70",
+        "#EB777C",
+        "#87229D",
+        "#713229",
+        "#411265",
+      ],
+      data: ["4.7", "5.6", "6.2", "6.9", "7", "7.5", "8.1", "8.8", "9.5"],
+    },
+  ],
+};
+
 const configchart1 = {
   type: "doughnut",
   data: dataChart1,
   options: {
-    animation: false,
     plugins: {
       title: {
         display: true,
@@ -261,7 +282,6 @@ const configchart2 = {
   type: "doughnut",
   data: dataChart2,
   options: {
-    animation: false,
     plugins: {
       legend: {
         display: false,
@@ -289,9 +309,79 @@ const configchart2 = {
   },
 };
 
+const configchart3 = {
+  type: "bar",
+  data: dataChart3,
+  options: {
+    // responsive: true,
+    // maintainAspectRatio: false,
+    scales: {
+      y: {
+        display: true,
+        min: 0,
+        max: 12,
+        ticks: {
+          stepSize: 3,
+        },
+        title: {
+          display: true,
+          text: "Tỷ USD",
+          font: {
+            weight: "bold",
+            size: 18,
+          },
+          color: "#000",
+        },
+      },
+      // y: {
+      //   display: true,
+      //   title: {
+      //     display: true,
+      //     text: "Trục Y",
+      //     color: "black",
+      //   },
+      // },
+    },
+    plugins: {
+      datalabels: {
+        anchor: "end",
+        align: "end",
+      },
+      title: {
+        display: true,
+        text: "2012 - 2020F Kim Ngạch Xuất Khẩu Gỗ Và Sản Phẩm Gỗ Việt nam",
+        font: {
+          size: 18,
+          family: "Roboto",
+          weight: "bold",
+        },
+        padding: {
+          bottom: 50,
+        },
+      },
+      tooltip: {
+        callbacks: {
+          label: function (context) {
+            return context.dataset.label + ": " + context.formattedValue + "%";
+          },
+        },
+      },
+      legend: {
+        display: false,
+        labels: {
+          usePointStyle: true,
+        },
+        align: "start",
+        padding: 10,
+      },
+    },
+  },
+};
+
 if (chart1) {
   new Chart(chart1, configchart1);
   new Chart(chart2, configchart2);
+  new Chart(chart3, configchart3);
 }
 
 const statCountry = [

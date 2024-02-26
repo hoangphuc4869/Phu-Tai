@@ -53,6 +53,12 @@
                     <div class="row legend2"></div>
                 </div>
             </div>
+            <div class="chart-wrap">
+                <canvas class="chart3">
+
+                </canvas>
+
+            </div>
         </div>
     </div>
 </div>

@@ -185,31 +185,31 @@
 
 <div class="mission-wrap">
     <div class="container missions">
-        <div class="row">
-            <div class="col-md-6">
-                <div class="mission-heading">
-                    <div class="mis-title"><?php echo get_field("mission-title") ?></div>
-                    <div class="mis-desc"><?php echo get_field("mission-desc") ?></div>
-                </div>
-            </div>
-            <?php if(have_rows("missions")): while(have_rows("missions")): the_row(); ?>
-            <div class="col-md-6">
-                <div class="mission">
-                    <div class="mission-bg">
-                        <img src="<?php echo get_sub_field("bg") ?>" alt="" class="w-100">
-                    </div>
-                    <div class="mis-name-wrap">
-                        <img src="<?php echo get_sub_field("icon") ?>" alt="">
-                        <div class="mis-name"><?php echo get_sub_field("mission") ?></div>
-                    </div>
-                    <div class="mis-text">
-                        <?php echo get_sub_field("text") ?>
-                    </div>
-                </div>
-            </div>
-            <?php endwhile;endif ?>
 
+
+        <div class="mission-heading">
+            <div class="mis-title"><?php echo get_field("mission-title") ?></div>
+            <div class="mis-desc"><?php echo get_field("mission-desc") ?></div>
         </div>
+
+        <?php if(have_rows("missions")): while(have_rows("missions")): the_row(); ?>
+
+        <div class="mission">
+            <div class="mission-bg">
+                <img src="<?php echo get_sub_field("bg") ?>" alt="" class="w-100">
+            </div>
+            <div class="mis-name-wrap">
+                <img src="<?php echo get_sub_field("icon") ?>" alt="">
+                <div class="mis-name"><?php echo get_sub_field("mission") ?></div>
+            </div>
+            <div class="mis-text">
+                <?php echo get_sub_field("text") ?>
+            </div>
+        </div>
+
+        <?php endwhile;endif ?>
+
+
 
 
     </div>

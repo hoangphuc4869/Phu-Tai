@@ -1316,6 +1316,13 @@ div#khanhhoa {
   position: relative;
 }
 
+.container.missions {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  gap: 20px 70px;
+}
+
 @media (max-width: 1140px) {
 }
 @media (max-width: 960px) {
@@ -1435,6 +1442,13 @@ div#khanhhoa {
   }
 }
 @media (max-width: 720px) {
+  .container.missions {
+    grid-template-columns: auto;
+    grid-template-rows: auto;
+  }
+  .mission {
+    margin-bottom: 50px;
+  }
   .history .ewrap:last-child .event::after {
     display: block;
   }
