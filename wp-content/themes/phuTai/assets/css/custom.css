@@ -539,7 +539,35 @@ ul#menu-menu-da-op li.current_page_item a {
   /* margin-bottom: 30px; */
 }
 
-.nha-may-title {
+.chi-nhanh-title,
+.tv-title,
+.mis-title {
+  font-family: "Big Shoulders Display", sans-serif;
+  font-size: 50px;
+  font-weight: 600;
+  position: relative;
+  color: #001224;
+  text-transform: uppercase;
+  margin-bottom: 30px;
+  letter-spacing: -2px;
+}
+
+.tv-right {
+  font-family: "Roboto", sans-serif;
+
+  background-color: #001933;
+  color: #fff;
+  padding: 50px;
+  height: 100%;
+}
+
+.tv-right a {
+  color: #fff;
+  font-weight: 100;
+}
+
+.nha-may-title,
+.tv-title {
   margin-bottom: 30px;
 }
 
@@ -929,16 +957,25 @@ div#khanhhoa {
 .gioi-thieu-wrap {
   background: #cce6ff;
   padding: 50px 0;
+  padding-bottom: 1000px;
 }
 .gt-text {
   font-family: "Roboto", sans-serif;
-  font-size: 18px;
+  font-size: 17px;
   font-weight: 400;
   color: #003366;
 }
 .linhvuc-jsc {
   background: #00264d;
   color: #fff;
+  padding-bottom: 50px;
+}
+
+.linhvuc-jsc-wrap.overflow-hidden {
+  margin-top: -60%;
+}
+.chi-nhanh-wrap {
+  padding: 50px 0;
 }
 
 .jsc-title {
@@ -962,6 +999,7 @@ div#khanhhoa {
 
   font-size: 12px;
   font-weight: 400;
+  width: 70%;
 }
 .linhvuc-name span:last-child a {
   font-family: "Roboto", sans-serif;
@@ -972,7 +1010,8 @@ div#khanhhoa {
 }
 
 .linhvuc-name span:first-child {
-  font-size: 36px;
+  margin-right: 10px;
+  font-size: 70px;
   /* font-weight: bold; */
   color: transparent;
   font-family: "Roboto", sans-serif;
@@ -980,6 +1019,207 @@ div#khanhhoa {
 
   font-weight: 600;
 }
+
+.linhvuc-img {
+  padding-left: 85px;
+  margin-bottom: 20px;
+}
+.left-des {
+  padding: 40px;
+}
+.left-des .jsc-desc:last-child {
+  writing-mode: vertical-rl;
+  rotate: 180deg;
+  position: absolute;
+  width: 100%;
+
+  height: 100%;
+  font-size: 130px;
+  white-space: nowrap;
+  /* transform: translateY(-100%); */
+  bottom: 3%;
+  font-weight: 800;
+  left: 10px;
+  color: #3399ff47;
+  pointer-events: none;
+}
+
+.place {
+  font-family: "Roboto", sans-serif;
+  font-size: 35px;
+  font-weight: 500;
+  color: #f16336;
+}
+
+.cpny-name a {
+  font-family: "Roboto", sans-serif;
+
+  font-size: 18px;
+  font-weight: 500;
+  color: #003366;
+}
+
+.cpny-name {
+  margin-bottom: 10px;
+}
+.place {
+  margin-bottom: 40px;
+}
+
+.cpny-item {
+  margin-bottom: 40px;
+}
+
+.cpny-info p:nth-child(2) {
+  width: 70%;
+}
+.cpny-info p {
+  position: relative;
+  padding-left: 28px;
+  margin-bottom: 5px;
+}
+
+.cpny-info span:last-child {
+  font-family: "Roboto", sans-serif;
+  font-size: 13px;
+  color: #001933;
+}
+.cpny-info img {
+  position: absolute;
+  left: 0;
+  top: 6px;
+}
+.i {
+  padding-left: 30px;
+  position: relative;
+  margin-bottom: 30px;
+}
+.i img {
+  position: absolute;
+  top: 4px;
+
+  left: 0;
+}
+
+.tv-name a {
+  font-family: "Roboto", sans-serif;
+  font-size: 20px;
+  font-weight: 500;
+}
+.tv-des {
+  font-family: "Roboto", sans-serif;
+  font-size: 15px;
+  font-weight: 300;
+  margin: 20px 0;
+  color: #ffffffb3;
+}
+.iwrap {
+  font-weight: 100;
+  font-size: 15px;
+}
+.tv-left img.w-100 {
+  height: 100%;
+  object-fit: cover;
+}
+.tv-right {
+  padding: 37px;
+  padding-right: 100px;
+  padding-top: 50px;
+  padding-bottom: 50px;
+  position: relative;
+}
+
+.tv-right::before {
+  content: "";
+  width: 20px;
+  height: 100%;
+  right: 0px;
+  top: 0;
+  background-color: #043f7c;
+  position: absolute;
+}
+.tv .col-md-5 {
+  padding-left: 0;
+}
+.tv-right::after {
+  content: "";
+  width: 20px;
+  top: 0;
+  height: 100%;
+  right: 20px;
+  background-color: #022040;
+  position: absolute;
+}
+.mission-wrap {
+  padding: 100px 0;
+  /* background-color: #f4f4f4; */
+  background: linear-gradient(132deg, #dad8d8 50%, #e8e8e8 50%);
+}
+
+.mission {
+  position: relative;
+  margin-bottom: 50px;
+}
+.cty-tv-wrap {
+  padding-top: 50px;
+  background: #f4f4f4;
+}
+
+.mis-name-wrap {
+  position: absolute;
+  top: -25px;
+  right: 5%;
+  text-align: center;
+}
+.mis-text {
+  position: absolute;
+  bottom: 12%;
+  right: 5%;
+  font-family: Roboto;
+  font-size: 13px;
+  font-weight: 400;
+  /* line-height: 20px; */
+  /* letter-spacing: 0px; */
+  text-align: right;
+  width: 50%;
+}
+
+.mis-name {
+  font-family: "Big Shoulders Stencil Text", sans-serif;
+  font-size: 25px;
+  font-weight: 700;
+  color: #000;
+}
+
+.cty-tv-slider {
+  position: relative;
+}
+
+.btn-tv-wrap {
+  position: absolute;
+  bottom: 33px;
+  width: 8%;
+  right: 30%;
+}
+
+.btn-tv-wrap .swiper-button-prev::after,
+.btn-tv-wrap .swiper-button-next::after {
+  display: none;
+}
+
+.btn-tv-wrap .swiper-button-prev,
+.btn-tv-wrap .swiper-button-next {
+  background: #fff;
+  width: 30px;
+  height: 30px;
+  color: #526d88;
+}
+.mis-desc {
+  width: 60%;
+  font-size: 14px;
+  font-family: "Roboto", sans-serif;
+}
+
 @media (max-width: 1140px) {
 }
 @media (max-width: 960px) {
@@ -1018,8 +1258,138 @@ div#khanhhoa {
     background: #00000094;
     border-radius: 20px;
   }
+  .linhvuc-img {
+    padding-left: unset;
+    margin-top: 20px;
+  }
+  .jsc-title {
+    font-size: 26px;
+  }
+  .jsc-desc {
+    font-size: 14px;
+
+    width: 100%;
+  }
+  .linhvuc-jsc-wrap.overflow-hidden {
+    margin-top: -80%;
+  }
+  .gioi-thieu-wrap {
+    padding-bottom: 700px;
+  }
+  .gioi-thieu-title {
+    margin-bottom: 30px;
+  }
+  .cpny-info p:nth-child(2) {
+    /* width: 70%; */
+    width: 100%;
+  }
+  .img-bg {
+    height: 500px;
+    object-fit: cover;
+    object-position: center;
+    position: relative;
+  }
+  .img-bg {
+    height: 500px;
+  }
+  .btn-tv-wrap {
+    position: absolute;
+    bottom: 33px;
+    width: 13%;
+    right: 21%;
+  }
+  .i img {
+    position: absolute;
+    top: 2px;
+    left: 0;
+  }
+  .iwrap {
+    font-size: 13px;
+  }
+  .tv-right {
+    padding-right: 53px;
+  }
+  .tv-des {
+    font-size: 12px;
+  }
+
+  .tv-name a {
+    font-size: 16px;
+  }
+  .mis-desc {
+    width: 80%;
+  }
+  .mis-text {
+    bottom: 7%;
+
+    font-size: 10px;
+  }
+  .mis-name {
+    font-size: 19px;
+  }
+  .mis-name-wrap {
+    position: absolute;
+    top: -50px;
+  }
+  .mission {
+    margin-bottom: 100px;
+  }
+  .mission-wrap {
+    padding-bottom: 50px;
+  }
 }
 @media (max-width: 720px) {
+  .mission-wrap {
+    padding: 50px 0;
+  }
+  .mission-wrap {
+    padding-bottom: 0;
+  }
+  .mis-name-wrap {
+    top: -30px;
+  }
+  .mission-heading {
+    margin-bottom: 40px;
+  }
+  .btn-tv-wrap {
+    width: 22%;
+  }
+  .cpny-info p:nth-child(2) {
+    width: 100%;
+  }
+  .place {
+    margin-bottom: 40px;
+    margin-top: 40px;
+  }
+  .gioi-thieu-title {
+    font-size: 70px;
+  }
+  .gioi-thieu-title {
+    margin-bottom: 40px;
+  }
+  .linhvuc-img {
+    padding-left: unset;
+  }
+  .left-des {
+    padding: 20px;
+  }
+  .gioi-thieu-wrap {
+    padding-bottom: 40px;
+  }
+  .linhvuc-img {
+    margin-top: 20px;
+  }
+  .lv-wrap {
+    z-index: 1;
+    position: relative;
+  }
+  .jsc-desc {
+    width: 100%;
+    font-size: 14px;
+  }
+  .linhvuc-jsc-wrap.overflow-hidden {
+    margin-top: unset;
+  }
   canvas.chart2 {
     margin-top: 40px;
   }

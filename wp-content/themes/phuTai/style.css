@@ -82,6 +82,7 @@ input#s {
   transform: translate(-50%, -50%);
   border-radius: 10px;
   transition: all 0.8s ease;
+  pointer-events: none;
 }
 .hamburger.active span:nth-child(1) {
   transform: translate(-50%, 0) rotate(45deg);
@@ -424,5 +425,15 @@ ul#menu-menu-chinh li:hover .sub-menu::before {
   .company-name-footer {
     font-size: 30px;
     padding: 0;
+  }
+  .hamburger span:nth-child(1) {
+    transform: translate(-50%, -10px);
+  }
+
+  .hamburger span:nth-child(3) {
+    transform: translate(-50%, 8px);
+  }
+  .hamburger span {
+    width: 25px;
   }
 }

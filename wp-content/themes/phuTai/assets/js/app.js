@@ -64,6 +64,15 @@ var swiper = new Swiper(".news-swiper", {
   },
 });
 
+var swiper = new Swiper(".cty-tv-slider", {
+  navigation: {
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev",
+  },
+  slidesPerView: 1,
+  spaceBetween: 20,
+});
+
 const boxItem = document.querySelectorAll(".box-wrap li");
 const box = document.querySelectorAll(".box");
 let getSlide = boxItem.length - 1;
