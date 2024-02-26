@@ -348,9 +348,26 @@ ul#menu-menu-chinh li:hover .sub-menu::before {
   box-shadow: 0px 0px 10px #00000080;
 }
 
+.cpny {
+  position: relative;
+}
+
+.cpny::before {
+  position: absolute;
+  content: "";
+  width: 1px;
+  height: 100%;
+  top: 0;
+  left: 46%;
+  background-color: #00264d;
+}
+
 @media (max-width: 1140px) {
 }
 @media (max-width: 960px) {
+  .cpny::before {
+    display: none;
+  }
 }
 @media (max-width: 720px) {
   .company-name-footer {

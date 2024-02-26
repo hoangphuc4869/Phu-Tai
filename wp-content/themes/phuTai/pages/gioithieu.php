@@ -65,6 +65,23 @@
     </div>
 </div>
 
+<div class="history-wrap">
+    <div class="container">
+        <div class="history-title"><?php echo get_field("history-title") ?></div>
+        <div class="history">
+            <?php if(have_rows("history")): while(have_rows("history")): the_row(); ?>
+            <div class="ewrap">
+                <div class="event">
+                    <div class="year"><?php echo get_sub_field("year") ?></div>
+                    <div class="event-text"><?php echo get_sub_field("event") ?></div>
+                </div>
+            </div>
+            <?php endwhile;endif ?>
+
+        </div>
+    </div>
+</div>
+
 <div class="chi-nhanh-wrap">
     <div class="container">
         <div class="chi-nhanh-title"><?php echo get_field("chi-nhanh-title") ?></div>
@@ -197,6 +214,8 @@
 
     </div>
 </div>
+
+
 
 
 
