@@ -1,6 +1,9 @@
 var hamburger = document.querySelector(".hamburger");
 var menu9 = document.querySelector("#menu-menu-chinh");
 var menu = document.querySelector(".menu-wrap");
+var searchForm = document.querySelector(".search-form");
+var searchBtn = document.querySelector(".search-form");
+
 if (hamburger) {
   document.addEventListener("click", (e) => {
     if (!menu9.contains(e.target) && e.target != hamburger) {
@@ -35,6 +38,10 @@ var swiper = new Swiper(".heading-slider", {
     dynamicBullets: true,
   },
   loop: true,
+  autoplay: {
+    delay: 3500,
+    disableOnInteraction: false,
+  },
 });
 var swiper = new Swiper(".linhvuc-slider", {
   pagination: {
@@ -42,12 +49,20 @@ var swiper = new Swiper(".linhvuc-slider", {
     dynamicBullets: true,
   },
   loop: true,
+  autoplay: {
+    delay: 2500,
+    disableOnInteraction: false,
+  },
 });
 
 var swiper = new Swiper(".news-swiper", {
   navigation: {
     nextEl: ".swiper-button-next",
     prevEl: ".swiper-button-prev",
+  },
+  autoplay: {
+    delay: 2500,
+    disableOnInteraction: false,
   },
   slidesPerView: 3,
   spaceBetween: 24,
@@ -68,6 +83,10 @@ var swiper = new Swiper(".cty-tv-slider", {
   navigation: {
     nextEl: ".swiper-button-next",
     prevEl: ".swiper-button-prev",
+  },
+  autoplay: {
+    delay: 2500,
+    disableOnInteraction: false,
   },
   slidesPerView: 1,
   spaceBetween: 20,
@@ -313,7 +332,7 @@ const configchart3 = {
   type: "bar",
   data: dataChart3,
   options: {
-    // responsive: true,
+    responsive: true,
     // maintainAspectRatio: false,
     scales: {
       y: {

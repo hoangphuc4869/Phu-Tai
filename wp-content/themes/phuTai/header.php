@@ -69,8 +69,8 @@
                         ?>
                     </div>
                     <div class="search-bar position-relative">
-                        <?php echo do_shortcode("[display_search_form]") ?>
-                        <i class="fa-thin fa-magnifying-glass"></i>
+                        <?php //echo do_shortcode("[display_search_form]") ?>
+                        <?php get_search_form(); ?>
                     </div>
 
 

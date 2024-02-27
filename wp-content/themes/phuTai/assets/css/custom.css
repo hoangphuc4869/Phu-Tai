@@ -275,7 +275,7 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background: #72b8fd4f;
+  /* background: #72b8fd4f; */
 }
 .box-text-wrap .more {
   justify-content: flex-start;
@@ -420,6 +420,11 @@
   height: 0;
   overflow: hidden;
   transition: all 0.5s ease;
+}
+
+.box-content-mobile img {
+  height: 100%;
+  object-fit: cover;
 }
 .box-title-mobile span:first-child {
   padding: 0 10px;
@@ -798,6 +803,17 @@ div#khanhhoa {
   -webkit-box-orient: vertical;
   -webkit-line-clamp: 2;
   overflow: hidden;
+  transition: 0.3s ease;
+}
+.cty:hover .cty-name a {
+  color: #f16336;
+}
+
+.cty-img {
+  overflow: hidden;
+}
+.cty:hover .cty-img img {
+  transform: scale(1.1);
 }
 
 .cty-desc {
@@ -814,6 +830,7 @@ div#khanhhoa {
 .cty-img img {
   height: 200px;
   object-fit: cover;
+  transition: 0.3s ease;
 }
 
 .circle {
@@ -974,7 +991,7 @@ div#khanhhoa {
 }
 
 .linhvuc-jsc-wrap.overflow-hidden {
-  margin-top: -60%;
+  margin-top: -900px;
 }
 .chi-nhanh-wrap {
   padding: 50px 0;
@@ -1260,7 +1277,7 @@ div#khanhhoa {
 }
 .history-wrap {
   /* padding: 100px 0; */
-  padding-top: 70px;
+  padding-top: 30px;
   background: #f4f4f4;
 }
 .event-text p {
@@ -1322,10 +1339,19 @@ div#khanhhoa {
   grid-template-rows: 1fr 1fr;
   gap: 20px 70px;
 }
+.row.chart {
+  margin-top: 40px;
+}
 
 @media (max-width: 1140px) {
 }
 @media (max-width: 960px) {
+  .chi-nhanh-title,
+  .history-title,
+  .tv-title,
+  .mis-title {
+    font-size: 45px;
+  }
   .stake-name a {
     font-size: 22px;
   }
@@ -1425,7 +1451,7 @@ div#khanhhoa {
   .mis-text {
     bottom: 7%;
 
-    font-size: 10px;
+    font-size: 11px;
   }
   .mis-name {
     font-size: 19px;
@@ -1440,8 +1466,95 @@ div#khanhhoa {
   .mission-wrap {
     padding-bottom: 50px;
   }
+  .history {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: auto;
+  }
+  .history .ewrap:nth-child(10n + 3) .event {
+    border-right: 1px dashed;
+    border-left: none;
+  }
+  .history .ewrap:nth-child(10n + 6) .event {
+    padding-left: unset;
+    border-left: unset;
+  }
+  .history .ewrap:nth-child(10n + 5) .event {
+    border-right: unset;
+  }
+  .history .ewrap:nth-child(n + 4):nth-child(-n + 6) .event::after,
+  .history .ewrap:nth-child(n + 10):nth-child(-n + 12) .event::after,
+  .history .ewrap:nth-child(n + 16):nth-child(-n + 18) .event::after {
+    top: 0;
+    right: unset;
+    left: 40px;
+    transform: rotate(-90deg) translateX(77%);
+  }
+  .history .ewrap:nth-child(10n + 4) .event {
+    border-left: 1px dashed;
+    padding-left: 10px;
+  }
+  .history .ewrap:nth-child(n + 7):nth-child(-n + 9) .event::after {
+    top: 0;
+    right: unset;
+    left: 40px;
+    transform: rotate(90deg) translateX(-77%);
+  }
+  .history .ewrap:nth-child(9) {
+    border-right: 1px dashed;
+  }
+  .history .ewrap:nth-child(10) .event {
+    border-left: 1px dashed;
+    padding-left: 10px;
+  }
+  .history .ewrap:nth-child(13) .event {
+    border-right: none;
+  }
+  .history .ewrap:nth-child(14) .event {
+    border-left: none;
+  }
 }
 @media (max-width: 720px) {
+  .history .ewrap:nth-child(10) .event {
+    padding-left: 0px;
+  }
+  .history .ewrap:nth-child(9) {
+    border-right: 1px dashed;
+  }
+  .history .ewrap:nth-child(10n + 3) .event {
+    border-right: none;
+    border-left: none;
+  }
+  .event::after {
+    width: 3px;
+  }
+  .history .ewrap:nth-child(10n + 4) .event {
+    border-left: none;
+    padding-left: 0px;
+  }
+  .history .ewrap:nth-child(n + 4):nth-child(-n + 6) .event::after,
+  .history .ewrap:nth-child(n + 10):nth-child(-n + 12) .event::after,
+  .history .ewrap:nth-child(n + 16):nth-child(-n + 18) .event::after {
+    top: 0;
+    right: unset;
+    left: 12px;
+    transform: rotate(0) translateX(77%);
+  }
+  .history .ewrap:nth-child(10) .event {
+    border-left: none;
+  }
+  .row.chart {
+    margin-top: unset;
+  }
+  .chi-nhanh-map img {
+    width: 100%;
+  }
+  .chart3 .y-axis-title {
+    display: none;
+  }
+  canvas.chart3 {
+    margin-top: 50px;
+  }
   .container.missions {
     grid-template-columns: auto;
     grid-template-rows: auto;

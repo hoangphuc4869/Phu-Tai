@@ -29,13 +29,50 @@ ul#menu-menu-language li a {
   font-family: "Big Shoulders Text", sans-serif;
   font-size: 15px;
 }
-.search-bar i.fa-thin.fa-magnifying-glass {
+
+/* .search-bar i.fa-thin.fa-magnifying-glass {
   position: absolute;
   top: 9px;
   right: 13px;
   font-weight: 300;
   color: #989898;
   cursor: pointer;
+} */
+
+form.form-inline.search-form.my-2.my-lg-0 {
+  position: relative;
+  width: 170px;
+}
+input.form-control.mr-sm-2 {
+  border-radius: 30px;
+  border: 1px solid #393939;
+  padding-top: 7px;
+  padding-bottom: 7px;
+  padding-right: 30px;
+}
+button.search-btn {
+  position: absolute;
+  top: 50%;
+  right: 5px;
+  transform: translateY(-50%);
+  border: none;
+  background: none;
+}
+.search-form input {
+  border-radius: 30px;
+  border: 1px solid #393939;
+  padding-top: 7px;
+  padding-bottom: 7px;
+  padding-right: 30px;
+
+  transition: 0.5s ease;
+}
+.search-form {
+  position: relative;
+  width: 170px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
 }
 
 ul#menu-menu-language li.current-language-menu-item a {
@@ -362,6 +399,29 @@ ul#menu-menu-chinh li:hover .sub-menu::before {
   background-color: #00264d;
 }
 
+.no-result {
+  /* margin-top: 30px; */
+  font-family: "Roboto", sans-serif;
+  color: red;
+}
+
+.page-title p {
+  font-size: 16px;
+  margin-top: 10px;
+  color: green;
+}
+
+.results {
+  margin-top: 30px;
+}
+
+.search-result {
+  margin-bottom: 30px;
+}
+h1.page-title {
+  font-family: "Roboto", sans-serif;
+}
+
 @media (max-width: 1140px) {
 }
 @media (max-width: 960px) {
@@ -370,6 +430,24 @@ ul#menu-menu-chinh li:hover .sub-menu::before {
   }
 }
 @media (max-width: 720px) {
+  /* .search-form {
+    width: 44px;
+    transition: 0.5s ease;
+  }
+  .search-form.active {
+    width: 170px;
+
+    transition: 0.5s ease;
+  }
+
+  .search-form input {
+    width: 0;
+    opacity: 0;
+  }
+  .search-form.active input {
+    width: 100%;
+    opacity: 1;
+  } */
   .company-name-footer {
     transform: unset;
   }
@@ -389,9 +467,13 @@ ul#menu-menu-chinh li:hover .sub-menu::before {
   .company-name {
     display: none;
   }
-  .search-bar {
-    display: none;
+  .language {
+    margin-right: 10px;
   }
+  /* .search-bar {
+    display: none;
+  } */
+
   .hamburger-wrap {
     margin-left: 12px;
     padding-left: 12px;
